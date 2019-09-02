@@ -103,7 +103,8 @@ def is_anacoda():
 def get_executable_extension():
     # type: () -> str
     if is_windows():
-        return '.bat' if is_anacoda() else '.exe'
+        # windows下为'.exe'
+        return '.exe' if is_anacoda() else '.bat'
     else:
         return ''
 
